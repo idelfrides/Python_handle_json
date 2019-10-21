@@ -31,11 +31,11 @@ class CreateJson(object):
         if not isfile(filepath):             
             with open(filepath, 'w') as f:
                 json.dump(newdata, f, indent=4, sort_keys=True, separators=(',', ': '))
-            self.j_utils.success_info()
+            self.j_utils.success_information()
             return True
 
         if isfile(filepath):
-            self.j_utils.already_exists_info()
+            self.j_utils.already_exists_information()
             return False
 
     

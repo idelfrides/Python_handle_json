@@ -2,14 +2,15 @@
 
 from os.path import dirname, realpath, isfile
 from JsonHandlerPackage.json_utils import Utils as util_m
-import json
+import json, time
 
 
 class DeleteJson(object):
-    """ Delete Json files class """
+    """ Delete Json files """
 
     def __init__(self):
         self.j_utils = util_m.Utils()
+
 
     def delete_many(self, filepath, keys2delete):
         """ Delete many records from json file
@@ -20,13 +21,13 @@ class DeleteJson(object):
             :type keys2delete: list
             :rtype: Boolean 
         """
-        
+
         option = self.j_utils.danger_info()
-        if option  is 'quit':
+        if option is 'quit':
             return False
         if option is 'yes':
             pass 
-  
+ 
         if isfile(filepath):
             with open(filepath) as f:
                 new_data = json.load(f)
@@ -46,6 +47,7 @@ class DeleteJson(object):
         else:
             self.j_utils.not_exists_info()
             return False
+
 
     def delete_one(self, filepath, key):
         """ Delete one record from file
@@ -81,5 +83,3 @@ class DeleteJson(object):
         else:
             self.j_utils.not_exists_info()
             return False
-
-

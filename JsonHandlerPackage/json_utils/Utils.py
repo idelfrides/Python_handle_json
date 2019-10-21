@@ -50,25 +50,29 @@ class Utils(object):
         
         info = """
         -------------------------------
-        ------- DANGER ACTION --------
+        ------- DANGER ACTION ---------
         -------------------------------
         
-            This is a danger a action.
+            This is a danger action.
         """
         print('{}'.format(info))
         time.sleep(7)
 
         print("\n\n Enter yes to continue or quit to abord")
+
         try:
-            option = input('\n\n Enter your choice:  ')
-        except Exception as er:
-            print('\n PYTHON SAID: {} - {} \n {} - {}'.format(er, er.__cause__, er.__class__, er.__context__))
-            self.danger_info()
+            option = input('\n\n Enter your choice >  ')
+        except KeyboardInterrupt as ki:
+            print('\n\n WARNING: Program Interrupted by user {}'.format(ki))
+            print('\n CLASS:  {}'.format(ki.__class__))
+            time.sleep(5)
+            return 'quit'    
         else:
-            if option  in ['yes', 'quit']:
+            if option in ['yes', 'quit']:
                 return option
             else:
                 print('\n\n INVALID OPTION ')
+                time.sleep(5)
                 self.danger_info() 
         finally:
             pass

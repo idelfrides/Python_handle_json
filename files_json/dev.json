@@ -1,8 +1,6 @@
 {
-    "company": "ibm",
-    "country": "USA",
-    "dev_name": "WAR MACHINE",
-    "level": "JR",
-    "role": "dasigner",
-    "salary": 100
+    "company": "Padtec",
+    "country": "Brazil",
+    "dev_name": "Simeao",
+    "role": "Full stack dev"
 }

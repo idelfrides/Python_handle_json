@@ -62,7 +62,7 @@ class DeleteJson(object):
         """
           
         option = self.j_utils.danger_information()
-        if option  == 'quit':
+        if option == 'quit':
             return False
         if option == 'yes':
             pass

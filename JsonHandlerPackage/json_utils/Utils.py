@@ -73,7 +73,7 @@ class Utils(object):
             else:
                 print('\n\n INVALID OPTION ')
                 time.sleep(5)
-                self.danger_info() 
+                self.danger_information() 
         finally:
             pass
 

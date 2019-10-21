@@ -6,7 +6,7 @@ from JsonHandlerPackage.json_utils import Utils as util_m
 
 
 class ReadJson(object):
-    """ Read Json files class """
+    """ Read Json files """
 
     def __init__(self):
         self.j_utils = util_m.Utils()
@@ -22,9 +22,9 @@ class ReadJson(object):
         if isfile(filepath):
             with open(filepath) as f:
                 return json.load(f)   
-            self.j_utils.success_info()
+            self.j_utils.success_information()
         else:
-            self.j_utils.not_exists_info()
+            self.j_utils.not_exists_information()
             return False
 
     def retrieve_one(self, filepath, attribute):
@@ -41,9 +41,9 @@ class ReadJson(object):
             with open(filepath) as f:
                 data = json.load(f)   
                 return data[attribute]  
-            self.j_utils.success_info()        
+            self.j_utils.success_information()        
         else:
-            self.j_utils.not_exists_info()
+            self.j_utils.not_exists_information()
             return False
 
    

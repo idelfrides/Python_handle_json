@@ -38,10 +38,10 @@ class AddRecord(object):
                     sort_keys=True, 
                     separators=(',', ': ')
                 )
-            self.j_utils.success_info()
+            self.j_utils.success_information()
             return True
         else:
-            self.j_utils.not_exists_info()
+            self.j_utils.not_exists_information()
             return False
 
 

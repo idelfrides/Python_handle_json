@@ -1,4 +1,4 @@
-# Handle json documents with python 3
+# Handle json documents with python
 
 ### The Project
 This is a project created to **handle json files in Python 3.**

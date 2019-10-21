@@ -5,7 +5,7 @@ import time
 class Utils(object):
     """ Utilitaries recourses """
 
-    def success_info(self):
+    def success_information(self):
         """ Show SUCCESS ACTION 
             information to user """
         
@@ -18,7 +18,7 @@ class Utils(object):
         """
         print('{}'.format(info))
 
-    def not_exists_info(self):
+    def not_exists_information(self):
         """ Show NOT EXISTS FILE
             information to user """
         
@@ -31,7 +31,7 @@ class Utils(object):
         """
         print('{}'.format(info))
 
-    def already_exists_info(self):
+    def already_exists_information(self):
         """ Show ALREADY EXISTS FILE 
             information to user """
         
@@ -44,7 +44,7 @@ class Utils(object):
         """
         print('{}'.format(info))
 
-    def danger_info(self):
+    def danger_information(self):
         """ Show DANGER ACTION 
             information to user """
         

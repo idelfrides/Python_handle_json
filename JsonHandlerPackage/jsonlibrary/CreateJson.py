@@ -31,7 +31,6 @@ class CreateJson(object):
         if not isfile(filepath):             
             with open(filepath, 'w') as f:
                 json.dump(newdata, f, indent=4, sort_keys=True, separators=(',', ': '))
-            
             self.j_utils.success_info()
             return True
 

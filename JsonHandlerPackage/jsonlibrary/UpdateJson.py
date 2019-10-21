@@ -6,7 +6,7 @@ from JsonHandlerPackage.json_utils import Utils as util_m
 
 
 class UpdateJson(object):
-    """ Json files handler class """
+    """ Json files handler """
 
     def __init__(self):
         self.j_utils = util_m.Utils()
@@ -40,9 +40,10 @@ class UpdateJson(object):
                     sort_keys=True, 
                     separators=(',', ': ')
                 )
+            self.j_utils.success_information()
             return True
         else:
-            self.j_utils.not_exists_info()
+            self.j_utils.not_exists_information()
             return False
 
     def update_one(self, filepath, *args):
@@ -70,8 +71,9 @@ class UpdateJson(object):
                     sort_keys=True, 
                     separators=(',', ': ')
                 )
+            self.j_utils.success_information()
             return True
         else:
-            self.j_utils.not_exists_info()
+            self.j_utils.not_exists_information()
             return False
 

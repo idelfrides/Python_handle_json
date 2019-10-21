@@ -37,13 +37,12 @@ class MainJson(ReadJson, UpdateJson):
         # status = UpdateJson().update_many(self.path_data, new_data)
         # status = UpdateJson().update_one(self.path_data, 'dev_name','WAR MACHINE')
         
-        status = self.dtj.delete_one(self.path_data, 'salary')
+        status = self.dtj.delete_one(self.path_data, 'level')
         # status = self.dtj.delete_many(self.path_data, ['salary','age'])
         
-        # status = self.add.add_record(self.path_data, {"level": 'JR', "salary": 100})
+        # status = self.add.add_record(self.path_data, {"age": 29, "salary": 500, "level": 'JR'})
         
         if status is False:
-            print('\n\n')
             print('\n\n RESULT:  ', status)
             time.sleep(t_sleep)
             print('\n\n')

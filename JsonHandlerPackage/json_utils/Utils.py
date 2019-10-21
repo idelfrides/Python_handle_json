@@ -1,6 +1,6 @@
 """ Utilitaries recourses module """
 import time
-
+from textwrap import dedent
 
 class Utils(object):
     """ Utilitaries recourses """
@@ -9,55 +9,55 @@ class Utils(object):
         """ Show SUCCESS ACTION 
             information to user """
         
-        info = """
+        info = dedent("""
         -------------------------------
         ------  SUCCESS ACTION --------
-        -------------------------------
-
+        
          Action performed successfully.
-        """
+        -------------------------------
+        """)
         print('{}'.format(info))
 
     def not_exists_information(self):
         """ Show NOT EXISTS FILE
             information to user """
         
-        info = """
+        info = dedent("""
         -------------------------------
         ------ FILE NOT EXISTS --------
-        -------------------------------
-
+        
               File do not exists.
-        """
+        -------------------------------
+        """)
         print('{}'.format(info))
 
     def already_exists_information(self):
         """ Show ALREADY EXISTS FILE 
             information to user """
         
-        info = """
+        info = dedent("""
         -------------------------------
         ------- ALREADY EXISTS --------
-        -------------------------------
         
             The file aleady exists.
-        """
+        -------------------------------
+        """)
         print('{}'.format(info))
 
     def danger_information(self):
         """ Show DANGER ACTION 
             information to user """
-        
-        info = """
+        import pdb
+        info = dedent("""
         -------------------------------
         ------- DANGER ACTION ---------
-        -------------------------------
         
             This is a danger action.
-        """
+        -------------------------------
+        """)
         print('{}'.format(info))
         time.sleep(7)
-
+        # pdb.set_trace()
         print("\n\n Enter yes to continue or quit to abord")
 
         try:
@@ -68,6 +68,7 @@ class Utils(object):
             time.sleep(5)
             return 'quit'    
         else:
+            print('option: ', option)
             if option in ['yes', 'quit']:
                 return option
             else:

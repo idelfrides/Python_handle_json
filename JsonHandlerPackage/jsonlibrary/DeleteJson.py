@@ -22,10 +22,12 @@ class DeleteJson(object):
             :rtype: Boolean 
         """
 
-        option = self.j_utils.danger_info()
-        if option is 'quit':
+        option = self.j_utils.danger_information()
+        print('\n option: ', option)
+        if option == "quit":
+            print('\n chosen quit')
             return False
-        if option is 'yes':
+        if option == 'yes':
             pass 
  
         if isfile(filepath):
@@ -59,10 +61,10 @@ class DeleteJson(object):
             :rtype: Boolean 
         """
           
-        option = self.j_utils.danger_info()
-        if option  is 'quit':
+        option = self.j_utils.danger_information()
+        if option  == 'quit':
             return False
-        if option is 'yes':
+        if option == 'yes':
             pass
 
         if isfile(filepath):

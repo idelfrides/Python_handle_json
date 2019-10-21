@@ -6,7 +6,7 @@ from JsonHandlerPackage.json_utils import Utils as util_m
 
 
 class UpdateJson(object):
-    """ Json files handler """
+    """ Update Json files """
 
     def __init__(self):
         self.j_utils = util_m.Utils()

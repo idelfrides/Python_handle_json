@@ -1,6 +1,8 @@
 {
+    "age": 29,
     "company": "Padtec",
     "country": "Brazil",
     "dev_name": "Simeao",
-    "role": "Full stack dev"
+    "role": "Full stack dev",
+    "salary": 500
 }

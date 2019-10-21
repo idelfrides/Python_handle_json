@@ -6,7 +6,7 @@ from JsonHandlerPackage.json_utils import Utils as util_m
 
 
 class CreateJson(object):
-    """ Create Json files class """
+    """ Create Json files """
 
     def __init__(self):
         """ init method """

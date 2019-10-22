@@ -23,8 +23,16 @@ class MainJson(ReadJson, UpdateJson):
     def main(self):
         """ main method """  
 
-        t_sleep = 2            
-        self.ctj.create_json(self.path_data)
+        t_sleep = 2
+
+        initial_data = {
+            "dev_name": 'Idelfrides', 
+            "company": 'Izio', 
+            "role": 'Back-end dev', 
+            "country": 'Brasil'
+        }
+
+        status = self.ctj.create_json(self.path_data, initial_data)
         
         """
         new_data = {
@@ -37,7 +45,7 @@ class MainJson(ReadJson, UpdateJson):
         # status = UpdateJson().update_many(self.path_data, new_data)
         # status = UpdateJson().update_one(self.path_data, 'dev_name','WAR MACHINE')
         
-        status = self.dtj.delete_one(self.path_data, 'level')
+        # status = self.dtj.delete_one(self.path_data, 'level')
         # status = self.dtj.delete_many(self.path_data, ['salary','age'])
         
         # status = self.add.add_record(self.path_data, {"age": 29, "salary": 500, "level": 'JR'})

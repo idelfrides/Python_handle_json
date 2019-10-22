@@ -38,4 +38,3 @@ class CreateJson(object):
             self.j_utils.already_exists_information()
             return False
 
-    

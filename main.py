@@ -25,24 +25,24 @@ class MainJson(ReadJson, UpdateJson):
 
         t_sleep = 2
 
-        initial_data = {
+        initial_content = {
             "dev_name": 'Idelfrides', 
             "company": 'Izio', 
             "role": 'Back-end dev', 
             "country": 'Brasil'
         }
 
-        status = self.ctj.create_json(self.path_data, initial_data)
+        status = self.ctj.create_json(self.path_data, initial_content)
         
         """
-        new_data = {
+        new_content = {
             "dev_name": 'obama', 
             "company": 'ibm', 
             "role": 'dasigner', 
             "country": 'USA'
         }"""
 
-        # status = UpdateJson().update_many(self.path_data, new_data)
+        # status = UpdateJson().update_many(self.path_data, new_content)
         # status = UpdateJson().update_one(self.path_data, 'dev_name','WAR MACHINE')
         
         # status = self.dtj.delete_one(self.path_data, 'level')

@@ -5,8 +5,10 @@ from JsonHandlerPackage import ReadJson
 from JsonHandlerPackage import UpdateJson
 from JsonHandlerPackage import DeleteJson
 from JsonHandlerPackage import AddRecord
+from JsonHandlerPackage import Utils
 from os.path import dirname, realpath, join
 import time
+from textwrap import dedent
 
 
 class MainJson(ReadJson, UpdateJson):
@@ -18,21 +20,22 @@ class MainJson(ReadJson, UpdateJson):
         self.ctj = CreateJson()
         self.dtj = DeleteJson()
         self.add = AddRecord()
+        self.j_utils = Utils()
 
 
     def main(self):
         """ main method """  
 
-        t_sleep = 2
-
+        t_sleep = 5
+        '''
         initial_content = {
             "dev_name": 'Idelfrides', 
             "company": 'Izio', 
             "role": 'Back-end dev', 
             "country": 'Brasil'
-        }
+        }'''
 
-        status = self.ctj.create_json(self.path_data, initial_content)
+        # status = self.ctj.create_json(self.path_data, initial_content)
         
         """
         new_content = {
@@ -48,12 +51,12 @@ class MainJson(ReadJson, UpdateJson):
         # status = self.dtj.delete_one(self.path_data, 'level')
         # status = self.dtj.delete_many(self.path_data, ['salary','age'])
         
-        # status = self.add.add_record(self.path_data, {"age": 29, "salary": 500, "level": 'JR'})
+        status = self.add.add_record(self.path_data, {"age": 29, "salary": 500, "level": 'JR'})
         
         if status is False:
             print('\n\n RESULT:  ', status)
+            self.j_utils.own_quit()
             time.sleep(t_sleep)
-            print('\n\n')
             exit()
         else:
             print('\n\n RESULT:  ', status)

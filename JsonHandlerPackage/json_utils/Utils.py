@@ -79,3 +79,17 @@ class Utils(object):
             pass
 
     
+    def own_quit(self):
+        """ Show QUIT WARNING  
+            information to user """
+        
+        info = dedent("""
+        -------------------------------
+        ------- QUIT WARNING ----------
+        
+            The app gonna be quited.
+            See you later :)
+        -------------------------------
+        """)
+        print('{}'.format(info))
+

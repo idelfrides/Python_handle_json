@@ -1,6 +1,9 @@
 {
+    "age": 29,
     "company": "Izio",
     "country": "Brasil",
     "dev_name": "Idelfrides",
-    "role": "Back-end dev"
+    "level": "JR",
+    "role": "Back-end dev",
+    "salary": 500
 }
